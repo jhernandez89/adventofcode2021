@@ -6,3 +6,7 @@ exports.parseTxt = function (file) {
   const textFile = text.toString().split("\n");
   return textFile;
 };
+
+exports.convertArrayToNumberType = function (data) {
+  return data.map((item) => Number(item));
+};
