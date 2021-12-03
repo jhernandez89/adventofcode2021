@@ -19,12 +19,8 @@ const calculateGammaAndEpislom = {
       });
 
       // determine whether we're getting the most or least frequent
-      let numToUse;
-      if (getMostCommon) {
-        numToUse = value[1] >= value[0] ? "1" : "0";
-      } else {
-        numToUse = value[1] >= value[0] ? "0" : "1";
-      }
+      const oneIsMostFrequent = value[1] >= value[0];
+      const numToUse = oneIsMostFrequent === getMostCommon ? "1" : "0";
 
       // filter out all unwanted values
       binarySet = binarySet.filter((row) => {
