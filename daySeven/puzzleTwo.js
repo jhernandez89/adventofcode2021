@@ -23,7 +23,6 @@ const crabWalk = {
       let moves = 0;
       dataFormatted.forEach((item) => {
         let currentRowDistance = Math.abs(item - i);
-        let currentRowMoves = 0;
         // need to spend (n total spaces moved) fuel for each space moved
         const newMoves = (currentRowDistance * (currentRowDistance + 1)) / 2;
         moves = moves + newMoves;
