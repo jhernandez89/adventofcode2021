@@ -22,6 +22,7 @@ const crabWalk = {
     for (let i = 0; i < loopsRequired; i++) {
       let moves = 0;
       dataFormatted.forEach((item) => {
+        // instead of determining which one is larger just get absolute value of horizontal moves needed
         let currentRowDistance = Math.abs(item - i);
 
         // to get the sume of numbers between 1 and horizontal distance needed to travel
