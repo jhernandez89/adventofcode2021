@@ -15,7 +15,6 @@ const crabWalk = {
     };
   },
   findArrayOfPositions: (dataFormatted, min, max) => {
-    // set current equal to the very first column
     const movesPerColumn = [];
     const loopsRequired = max - min;
 
