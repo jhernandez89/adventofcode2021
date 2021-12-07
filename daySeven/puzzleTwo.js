@@ -25,10 +25,8 @@ const crabWalk = {
         let currentRowDistance = Math.abs(item - i);
         let currentRowMoves = 0;
         // need to spend (n total spaces moved) fuel for each space moved
-        for (let j = 1; j <= currentRowDistance; j++) {
-          currentRowMoves = currentRowMoves + j;
-        }
-        moves = moves + currentRowMoves;
+        const newMoves = (currentRowDistance * (currentRowDistance + 1)) / 2;
+        moves = moves + newMoves;
       });
       movesPerColumn.push(moves);
     }
